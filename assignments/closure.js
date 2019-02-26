@@ -1,6 +1,22 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function higherOrderFunction() {
+  console.log(`I am the HOF`);
+  const closureMessage = "this is the closure";
+    function nestedFunc() {
+      const alsoClosure = "this is also a closure";
+    console.log(`${closureMessage} and ${alsoClosure}`);
+      function subNestedFunc() {
+        const nonClosure = "I am not a closure"
+        console.log(`${nonClosure} but ${closureMessage} and ${alsoClosure}`);
+    }
+    subNestedFunc();
+  }
+ nestedFunc();
+};
+
+console.log(higherOrderFunction());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
