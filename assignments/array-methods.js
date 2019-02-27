@@ -57,9 +57,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
 
-runners.forEach( function (runner) {
-    fullName.push(`${runner["first_name"]}, ${runner["last_name"]}`);
-});
+fullName.push(runners.forEach((name) =>(`${name["first_name"]}, ${name["last_name"]}`)));
 
 console.log(fullName);
 
@@ -83,11 +81,7 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
 
-const totalTickets = runners.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue.donation;
-  }, 0 );
-
-  ticketPriceTotal.push(totalTickets);
+ticketPriceTotal.push(runners.reduce((accumulator, currentValue) =>  accumulator + currentValue.donation, 0 ));
 
 console.log(ticketPriceTotal);
 
@@ -95,7 +89,28 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//organize by donation amount
+
+let topDonor = [];
+
+fullName.push(runners.forEach((name) =>(`${name["first_name"]}, ${name["last_name"]}`)));
+
+console.log(topDonor);
 
 // Problem 2
+//organize by name and get email.
+
+let emailList = [];
+
+emailList.push(runners.forEach((email) =>(`${email["email"]}`)));
+
+console.log(emailList);
 
 // Problem 3
+//organize by shirt size
+
+let shirtSize = [];
+
+shirtSize.push(runners.forEach((shirt) =>(`${name["first_name"]}, ${name["last_name"]}`)));
+
+console.log(fullName);
